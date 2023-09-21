@@ -2,6 +2,8 @@ package contactBook;
 
 import contactBook.Contact;
 
+import javax.xml.stream.FactoryConfigurationError;
+
 public class ContactBook {
     static final int DEFAULT_SIZE = 100;
 
@@ -91,6 +93,17 @@ public class ContactBook {
     //Pre: hasNext()
     public Contact next() {
         return contacts[currentContact++];
+    }
+
+    public boolean all_different_numbers() {
+        for (int i = 0; i < contacts.length; i++) {
+            for (int j = 0; j < i; j++) {
+                if (contacts[i].equals(contacts[j])) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
 }
