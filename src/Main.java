@@ -156,7 +156,7 @@ public class Main {
     private static void lookUpContact(Scanner in, ContactBook cBook) {
         int phone = in.nextInt(); in.nextLine();
         if (cBook.hasContact(phone)) {
-            System.out.println(cBook.getPhone(phone));
+            System.out.println(cBook.getName(phone));
         }
         else System.out.println(PHONE_NOT_EXIST);
     }

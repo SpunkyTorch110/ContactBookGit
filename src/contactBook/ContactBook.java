@@ -53,8 +53,8 @@ public class ContactBook {
     }
 
     //Pre: hasContact(phoneNumber)
-    public int getPhone(int phoneNumber) {
-        return contacts[searchIndex(phoneNumber)].getPhone();
+    public String getName(int phoneNumber) {
+        return contacts[searchIndex(phoneNumber)].getName();
     }
 
     //Pre: name != null && hasContact(name)
