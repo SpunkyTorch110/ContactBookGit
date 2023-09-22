@@ -168,7 +168,7 @@ public class Main {
     }
 
     private static void samePhoneNumbers(ContactBook cBook){
-        if(cBook.all_different_numbers()){
+        if(cBook.allDifferentNumbers()){
             System.out.println(HAS_DIFFRENT_NUMBER);
         }else{
             System.out.println(HAS_SAME_NUMBER);

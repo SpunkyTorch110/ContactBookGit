@@ -1,9 +1,5 @@
 package contactBook;
 
-import contactBook.Contact;
-
-import javax.xml.stream.FactoryConfigurationError;
-
 public class ContactBook {
     static final int DEFAULT_SIZE = 100;
 
@@ -118,10 +114,10 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
-    public boolean all_different_numbers() {
-        for (int i = 0; i < contacts.length; i++) {
+    public boolean allDifferentNumbers() {
+        for (int i = 0; i < counter; i++) {
             for (int j = 0; j < i; j++) {
-                if (contacts[i].equals(contacts[j])) {
+                if (contacts[i].getPhone() == contacts[j].getPhone()) {
                     return false;
                 }
             }
